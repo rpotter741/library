@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1 id="title">Personal Library</h1>
+        <div class="profile_container">
+            <div class="logOut_block"></div>
+        </div>
+        <button id="addBookBtn">Add New Book</button>
+    </div>
+
+    <div class="booksContainer">
+
+    </div>
+    <div class="footer">
+        <img id="rpdmLogo" src="img/PR_logo_png.png"></img>
+        <p>&copy;RobbiePottsDM</p>
+    </div>
+    <div class="inactive" id="submissionForm">
+        <h3>Add New Book</h3>
+        <div class="titleContainer">
+            <div class="inputTitle">Title:</div>
+            <input id="bookTitle" type="text" placeholder="Project Astraeus">
+        </div>
+        <div class="authorContainer">
+            <div class="inputTitle">Author:</div>
+            <input id="author" type="text" placeholder="Robert Potter">
+        </div>
+        <div class="pagesContainer">
+            <div class="inputTitle">Pages:</div>
+            <input id="pages" type="text" placeholder="312">
+        </div>
+        <div class="checkReadContainer">
+            <div id="haveRead" class="inputTitle">Have you read this book?</div>
+            <input type="checkbox" name="readStatus" id="isRead">
+        </div>
+        <div>
+            <button id="createNewBook">Submit</button>
+            <button id="cancelNewBook">Cancel</button>
+        </div>
+    </div>
+    <div id="overlay"></div>
+</body>
+</html>

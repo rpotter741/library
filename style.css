@@ -1,0 +1,226 @@
+body { 
+    background-color: gray;
+    margin: 0;
+    position: relative;
+    min-height: 98vh;
+}
+
+.header {
+    display: grid; 
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto;
+    background-color: lightslategray;
+    box-shadow: 0px 1rem 1rem black;
+    margin: 1rem 2rem;
+    border-radius: 1rem;
+    min-width: 800px;
+    position: sticky;
+    top: 0;
+}
+
+.header h1 {
+    justify-self: center;
+    align-self: center;
+    grid-area: 1/2/2/3;
+}
+
+.profile_container { 
+    justify-self: center;
+    align-self: center;
+}
+
+#addBookBtn {
+    grid-area: 2/2/3/3;
+    width: 25%;
+    align-self: center;
+    justify-self: center;
+    background: none;
+    border: none;
+    font-size: 26px;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    margin: 1em;
+}
+
+#addBookBtn:hover { 
+    background: rgba(0,0,0,.5);
+    color: aliceblue;
+}
+
+.booksContainer {
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    place-content: center;
+    margin: 2rem 2rem;
+    gap: 1rem;
+    overflow-y:visible;
+    padding-bottom: 5.5rem;
+}
+
+#submissionForm {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    background-color: slategray;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: solid aliceblue 4px;
+    gap: 2rem;
+      
+}
+
+#submissionForm.active {
+    position: absolute;
+    top: 12rem;
+    left: 50%;
+    margin-left: -200px;
+}
+
+#submissionForm.inactive { 
+    display: none; 
+}
+
+#submissionForm button {
+    border-radius: 1rem;
+    padding: .25rem .5rem;
+}
+
+#createNewBook:hover, #cancelNewBook:hover{
+    color: aliceblue;
+    background-color: rgba(0,0,0,.5);
+}
+
+.titleContainer, .authorContainer, .pagesContainer{
+    display: flex;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.checkReadContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    gap: 1rem;
+}
+
+#haveRead {
+    width: 200px;
+}
+
+#isRead {
+    padding: 0;
+    margin: 0;
+    justify-self: start;
+    width: 50px;
+} 
+
+#readStatus {
+    width: 50px;
+}
+
+.inputTitle {
+    width: 50px;
+}
+
+input {
+    width: 200px;
+    height: 28px;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    border-width: 0 0 2px;
+    border-color: black;
+    justify-self: center;
+    
+}
+
+.bookBox {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    place-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 .25rem .25rem rgba(0,0,44,.5);
+}
+
+.bookBox div {
+    font-size: 25px;
+}
+
+.read, .unread, .removeBtn {
+    border-radius: 1rem;
+    padding: .5rem;
+    font-size: 25px;
+    width: 75%;
+}
+
+.read {
+    background-color: rgba(33, 189,25,.6);
+    color: rgba(8, 45, 6, .9);
+    
+}
+
+.unread {
+    background-color: rgba(189, 33, 25, .6);
+    color: rgba(90, 8, 6, .9);
+    
+}
+
+.removeBtn {
+    background-color:  slategray;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.italic {
+    font-style: italic;
+    font-size: 30px;
+}
+
+#overlay {
+    display: none; 
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+}
+
+#overlay.active {
+    display: block;
+}
+
+.footer {
+    display: flex;
+    margin: 1rem 2rem -1rem 2rem;
+    background-color: lightslategray;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 97.5%;
+    border-radius: 1rem 1rem 0 0;
+    height: 7.5rem;
+    box-shadow: 0 -1rem 1rem rgba(0,0,0,.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.footer img {
+    height: 10rem;
+    padding: 0;
+    margin: 0;
+    margin-right: -2rem
+}
+
+.footer p {
+    font-size: 26px;
+}
