@@ -163,21 +163,36 @@ input {
 }
 
 .read {
-    background-color: rgba(33, 189,25,.6);
+    background-color: rgba(33, 189,25,.3);
+    color: rgba(8, 45, 6, .9);
+    
+}
+
+.read:hover {
+    background-color: rgba(33, 189,25,.7);
     color: rgba(8, 45, 6, .9);
     
 }
 
 .unread {
-    background-color: rgba(189, 33, 25, .6);
+    background-color: rgba(189, 33, 25, .3);
     color: rgba(90, 8, 6, .9);
     
+}
+
+.unread:hover {
+    background-color: rgba(189, 33, 25, .7);
+    color: rgba(90, 8, 6, .9);
 }
 
 .removeBtn {
     background-color:  slategray;
     color: aliceblue;
     font-size: 25px;
+}
+
+.removeBtn:hover {
+    background-color: rgba(42,58,74,.7);
 }
 
 .italic {
