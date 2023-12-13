@@ -21,6 +21,15 @@ class Library {
 
     }
 
+    updateRead(e) { 
+        const title = e.parentNode.firstChild.innerHTML;
+        const arrayLocation = this.books.findIndex((book) => book.title == title);
+        if(this.books[arrayLocation].isRead == false) {
+            this.books[arrayLocation].isRead = true;
+        } else {this.books[arrayLocation].isRead = false};
+        updateBookContainer();
+    }
+
 }
 
 const updateBookContainer = () => {
@@ -79,7 +88,8 @@ const changeStatus = (e) => {
         e.classList.remove("unread");
         e.classList.add("read");
     }
-}
+    } 
+
 
 const createBookDisplay = (book) => {
     let bookBox = document.createElement("div");
@@ -103,6 +113,8 @@ const createBookDisplay = (book) => {
              readStatus.textContent = "Read"}; 
         readStatus.addEventListener('click', () => {
             changeStatus(readStatus);
+            library.updateRead(readStatus);
+           
         })
     removeBtn.textContent = "Remove";
     removeBtn.classList.add("removeBtn");
